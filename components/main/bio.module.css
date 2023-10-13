@@ -1,0 +1,35 @@
+.container {
+  width: 500px;
+  height: 250px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  margin: auto;
+  display: flex;
+}
+
+.borderCircle {
+  border-radius: 9999px;
+  padding: 25px 20px;
+  /* padding-right: 0px; */
+}
+
+.bioInfo {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0px;
+  font-weight: 700;
+  height: 100px;
+}
+
+.top {
+  font-size: 32px;
+  color: #4047f0;
+}
+
+.middle {
+  font-size: 24px;
+}
+
+.bottom {
+  font-size: 20px;
+}
