@@ -1,14 +1,15 @@
 .headerWrapper {
   position: static;
   display: flex;
-  margin: 50px;
+  margin: 50px 40px;
   padding-bottom: 10px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 15px 10px -20px #111;
 }
 
 .nameLogo {
   display: flex;
   flex-direction: column;
+  padding-left: 15px;
 }
 
 .firstName,
@@ -32,6 +33,7 @@
   font-size: 20px;
   font-weight: 700;
   cursor: pointer;
+  padding-right: 15px;
 }
 
 .link {
