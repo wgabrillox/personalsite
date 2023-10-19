@@ -11,7 +11,7 @@ export default function Bio() {
           className={styles.borderCircle}
           height={200}
           width={200}
-          alt=""
+          alt="Picture of Warren R. Gabrillo"
         />
       </div>
       {/* TODO: Use bg img */}

@@ -11,7 +11,7 @@ export default function Header() {
       <div className={styles.links}>
         {/* TODO: Add underline animation on hover */}
         <div className={styles.link}>About</div>
-        <div className={styles.link}>Projects</div>
+        <div className={styles.link}>Project</div>
         {/* TODO: Add button animation on hover/on click */}
         <div className={styles.contact}>Contact</div>
       </div>
