@@ -2,7 +2,8 @@
   position: sticky;
   top: 0px;
   display: flex;
-  margin: 30px 40px 50px;
+  margin: 0px 40px 50px;
+  padding-top: 20px;
   padding-bottom: 10px;
   box-shadow: 0px 15px 10px -20px #111;
   background-color: white;
@@ -41,6 +42,11 @@
 .link {
   border-right: 3px solid black;
   padding: 5px 7px;
+}
+
+.active {
+  margin-right: 3px;
+  border-bottom: 1px solid black;
 }
 
 .contact {
