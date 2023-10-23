@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  margin: 15px auto;
+  width: 1000px;
+  flex-direction: column;
+}
+
+.title {
+  color: #4047f0;
+  font-weight: 700;
+  font-size: 34px;
+  margin: 0px auto;
+}
+
+.content {
+  margin-top: 30px;
+  display: flex;
+}
+
+.images {
+  display: flex;
+  width: 465px;
+}
+
+.leftColumn {
+  width: 250px;
+  height: 415px;
+  background-color: #d9d9d9;
+  margin-right: 15px;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.placeholderImage {
+  width: 200px;
+  height: 200px;
+  background-color: #d9d9d9;
+  margin-bottom: 15px;
+}
+
+.info {
+  flex-grow: 1;
+  margin: 0px 15px;
+  font-size: 18px;
+}
+
+.infoHeader {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+#name {
+  color: #4047f0;
+  font-weight: 700;
+}
+
+#rit {
+  color: #ff6900;
+  font-weight: 700;
+}
