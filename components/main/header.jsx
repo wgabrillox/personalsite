@@ -19,7 +19,13 @@ export default function Header({ active }) {
           <Link href={"/about"}>About</Link>
         </div>
         {/* <Link href={`/posts/${id}`}>{title}</Link> */}
-        <div className={styles.link}>Projects</div>
+        <div
+          className={`${styles.link} ${
+            active == "projects" ? styles.active : ""
+          }`}
+        >
+          <Link href={"/projects"}>Projects</Link>
+        </div>
         {/* TODO: Add button animation on hover/on click */}
         <div className={styles.contact}>Contact</div>
       </div>

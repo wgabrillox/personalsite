@@ -111,17 +111,20 @@ export default function Experiences() {
       <div className={styles.title}>Experiences</div>
 
       {experiences.map(
-        ({
-          image,
-          imageWidth,
-          imageHeight,
-          company,
-          position,
-          timeline,
-          description,
-          skills,
-        }) => (
-          <div className={styles.container}>
+        (
+          {
+            image,
+            imageWidth,
+            imageHeight,
+            company,
+            position,
+            timeline,
+            description,
+            skills,
+          },
+          index
+        ) => (
+          <div className={styles.container} key={index}>
             <div className={styles.experience}>
               <div className={styles.leftColumn}>
                 <div>
@@ -139,8 +142,8 @@ export default function Experiences() {
               </div>
               <div className={styles.middleColumn}>
                 <ul className={styles.description}>
-                  {description.map((item) => (
-                    <li>{item}</li>
+                  {description.map((item, index) => (
+                    <li key={index}>{item}</li>
                   ))}
                 </ul>
               </div>
@@ -148,8 +151,10 @@ export default function Experiences() {
                 <div className={styles.skills}>
                   <div className={styles.skillsHeader}>Key Skills Used:</div>
                   <ul className={styles.skillList}>
-                    {skills.map((skill) => (
-                      <li className={styles.skillLabel}>{skill}</li>
+                    {skills.map((skill, index) => (
+                      <li key={index} className={styles.skillLabel}>
+                        {skill}
+                      </li>
                     ))}
                   </ul>
                 </div>
