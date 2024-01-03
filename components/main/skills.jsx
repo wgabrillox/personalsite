@@ -2,89 +2,7 @@ import React, { useRef, useEffect } from "react";
 import * as d3 from "d3";
 import styles from "./skills.module.css";
 
-export default function Skills() {
-  const data = {
-    name: "Stack",
-    children: [
-      {
-        name: "Frontend",
-        children: [
-          { name: "HTML", value: 20 },
-          {
-            name: "CSS",
-            children: [
-              { name: "Bootstrap", value: 60 },
-              { name: "Styled Components", value: 60 },
-            ],
-          },
-          {
-            name: "Javascript",
-            children: [
-              {
-                name: "React",
-                children: [{ name: "Redux", value: 90 }],
-              },
-              { name: "NextJS", value: 10 },
-            ],
-          },
-          { name: "Typescript", value: 10 },
-          { name: "JQuery", value: 10 },
-        ],
-      },
-      {
-        name: "Backend",
-        children: [
-          { name: "Python", value: 40 },
-          {
-            name: "Database",
-            children: [
-              { name: "SQL", value: 60 },
-              { name: "MySQL", value: 20 },
-            ],
-          },
-          { name: "Java", value: 10 },
-          { name: "Django", value: 15 },
-          { name: "MongoDB", value: 10 },
-          { name: "Express", value: 10 },
-        ],
-      },
-      {
-        name: "Devops",
-        children: [
-          { name: "Azure", value: 20 },
-          { name: "Jenkins", value: 15 },
-          { name: "CircleCI", value: 20 },
-          { name: "Vercel", value: 10 },
-        ],
-      },
-      {
-        name: "Misc",
-        children: [
-          {
-            name: "Data Analytics",
-            children: [
-              { name: "GTM", value: 15 },
-              { name: "Google Analytics", value: 15 },
-              { name: "Datadog", value: 15 },
-              { name: "Firebase", value: 15 },
-            ],
-          },
-          { name: "Figma", value: 35 },
-          { name: "Jira", value: 50 },
-          { name: "Github", value: 50 },
-          { name: "Selenium", value: 15 },
-        ],
-      },
-      {
-        name: "Mobile",
-        children: [
-          { name: "Swift (ios14)", value: 10 },
-          { name: "React Native", value: 10 },
-        ],
-      },
-    ],
-  };
-
+export default function Skills({ skills }) {
   useEffect(() => {
     const width = 800;
     const height = 700;
@@ -106,7 +24,7 @@ export default function Skills() {
           .sort((a, b) => b.value - a.value)
       );
 
-    const root = partition(data);
+    const root = partition(skills[0]);
 
     const arc = d3
       .arc()
@@ -167,6 +85,12 @@ export default function Skills() {
       <div className={styles.title}>Skills</div>
       <div className={styles.container}>
         <svg></svg>
+      </div>
+
+      <div className={styles.footnote}>
+        *Note: Data isn't 100% accurate, more of a visual
+        representation/approximation and to practice using the D3 Library.
+        Mostly is accurate though!
       </div>
     </div>
   );
