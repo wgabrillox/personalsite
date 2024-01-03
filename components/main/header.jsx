@@ -13,18 +13,15 @@ export default function Header({ active }) {
       <div className={styles.spacer} />
       <div className={styles.links}>
         {/* TODO: Add underline animation on hover */}
-        <div
-          className={`${styles.link} ${active == "about" ? styles.active : ""}`}
-        >
-          <Link href={"/about"}>About</Link>
+        <div className={styles.link}>
+          <div className={`${active == "about" ? styles.active : ""}`}>
+            <Link href={"/about"}>About</Link>
+          </div>
         </div>
-        {/* <Link href={`/posts/${id}`}>{title}</Link> */}
-        <div
-          className={`${styles.link} ${
-            active == "projects" ? styles.active : ""
-          }`}
-        >
-          <Link href={"/projects"}>Projects</Link>
+        <div className={styles.link}>
+          <div className={`${active == "projects" ? styles.active : ""}`}>
+            <Link href={"/projects"}>Projects</Link>
+          </div>
         </div>
         {/* TODO: Add button animation on hover/on click */}
         <div className={styles.contact}>Contact</div>
