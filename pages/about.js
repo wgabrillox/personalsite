@@ -1,5 +1,6 @@
 import Header from "../components/main/header";
 import styles from "./about.module.css";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -10,10 +11,34 @@ export default function About() {
         <div className={styles.title}>ABOUT ME!</div>
         <div className={styles.content}>
           <div className={styles.images}>
-            <div className={styles.leftColumn}></div>
+            <div className={styles.leftColumn}>
+              <Image
+                priority
+                src="/images/about-me/wedding.JPG"
+                height={415}
+                width={250}
+                alt="Picture of Warren R. Gabrillo"
+              />
+            </div>
             <div className={styles.rightColumn}>
-              <div className={styles.placeholderImage}></div>
-              <div className={styles.placeholderImage}></div>
+              <div className={styles.rightColumnImage}>
+                <Image
+                  priority
+                  src="/images/about-me/mantou.JPG"
+                  height={200}
+                  width={200}
+                  alt="Picture of Warren R. Gabrillo"
+                />
+              </div>
+              <div className={styles.rightColumnImage}>
+                <Image
+                  priority
+                  src="/images/about-me/alien.jpeg"
+                  height={200}
+                  width={200}
+                  alt="Picture of Warren R. Gabrillo"
+                />
+              </div>
             </div>
           </div>
           <div className={styles.info}>
@@ -33,11 +58,12 @@ export default function About() {
             <br />
             I’m using this site as a personal resume as well as a practice of
             utilizing and learning different web technologies and frameworks.
-            Also listed on this site are some either ongoing personal projects.
+            Also listed on this site are some either ongoing or future personal
+            projects.
             <br />
-            <br />
+            {/* <br />
             Down below you can find some random pictures that depict some of my
-            interests/hobbies, and random tangents of learning I went about.
+            interests/hobbies, and random tangents of learning I went about. */}
           </div>
         </div>
       </div>
