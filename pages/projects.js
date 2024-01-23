@@ -48,6 +48,40 @@ export default function Projects() {
             </a>
           </div>
         </div>
+        <div className={styles.project}>
+          <div className={styles.projectTitle}>Guess the EA FC 24 Player</div>
+          <div className={styles.projectDescription}>
+            When the game EA FC 24 first dropped, a lot of the different teams
+            both domestic and international would play a game with their team
+            members and try to guess who was the mystery player solely based on
+            the statistics they were provided. So I thought this would be a fun
+            project to try to convert digitally. Currently I'm just utilizing a
+            mock dataset of the top 100 ranked players within the actual EA FC
+            player base. Eventually it would be great to get access to the full
+            database of 17k+ players, but I'll figure that out when needed. The
+            game is still under development but feel free to follow any progress
+            I make through the github page. The stack on this is just basic
+            Javascript/React.
+            <Image
+              priority
+              src={"/images/guesstheEAFC-example.png"}
+              width={400}
+              height={300}
+            />
+          </div>
+          <div className={styles.projectLink}>
+            <a href="https://github.com/wgabrillox/guesstheeafc">
+              <Image
+                priority
+                src={"/images/github-logo.png"}
+                width={30}
+                height={30}
+                alt="Github Logo"
+              />
+              <span>Github</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
