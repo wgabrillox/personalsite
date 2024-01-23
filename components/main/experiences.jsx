@@ -12,6 +12,7 @@ export default function Experiences({ experiences }) {
             image,
             imageWidth,
             imageHeight,
+            imageAlt,
             company,
             position,
             timeline,
@@ -29,7 +30,7 @@ export default function Experiences({ experiences }) {
                     src={image}
                     width={imageWidth}
                     height={imageHeight}
-                    alt="Wheels Up logo"
+                    alt={imageAlt}
                   />
                 </div>
                 <div className={styles.companyName}>{company}</div>
