@@ -1,5 +1,6 @@
 import styles from "./header.module.css";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Header({ active }) {
   return (
@@ -23,8 +24,8 @@ export default function Header({ active }) {
             <Link href={"/projects"}>Projects</Link>
           </div>
         </div>
-        {/* TODO: Add button animation on hover/on click */}
         <div className={styles.contact}>Contact</div>
+        <div className={styles.contactModal}></div>
       </div>
     </div>
   );

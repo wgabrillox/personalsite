@@ -5,8 +5,10 @@
 
 .container {
   display: flex;
-  width: 840px;
   margin: 0px auto;
+  max-width: 840px;
+  width: 95%;
+  container-type: inline-size;
 }
 
 .title {
@@ -23,4 +25,51 @@
   color: lightgray;
   margin: 0px auto;
   width: 500px;
+}
+
+.d3container {
+  /* width: 840px; */
+  width: 100%;
+  display: block;
+}
+
+.skillsContainer {
+  width: 100%;
+  display: none;
+  border-radius: 5px;
+}
+
+.skillContainer {
+  background-color: #ececec;
+  margin-right: 15px;
+  flex-grow: 1;
+}
+
+.skillContent {
+  padding: 15px;
+  flex: 1;
+}
+
+.skillHeader {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.skillMain {
+  margin-bottom: 5px;
+}
+
+.skillList {
+  margin: 0px auto;
+  padding-left: 30px;
+}
+
+@container (max-width: 800px) {
+  .d3container {
+    display: none;
+  }
+
+  .skillsContainer {
+    display: flex;
+  }
 }

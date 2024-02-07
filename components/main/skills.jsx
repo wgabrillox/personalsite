@@ -3,8 +3,9 @@ import * as d3 from "d3";
 import styles from "./skills.module.css";
 
 export default function Skills({ skills }) {
+  console.log("skills", skills);
   useEffect(() => {
-    const width = 800;
+    const width = 840;
     const height = 700;
     const radius = Math.min(800, 800) / 2;
     const color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -84,13 +85,43 @@ export default function Skills({ skills }) {
     <div className={styles.wrapper}>
       <div className={styles.title}>Skills</div>
       <div className={styles.container}>
-        <svg></svg>
-      </div>
+        <div className={styles.d3container}>
+          <svg></svg>
 
-      <div className={styles.footnote}>
-        *Note: Data isn't 100% accurate, more of a visual
-        representation/approximation and to practice using the D3 Library.
-        Mostly is accurate though!
+          <div className={styles.footnote}>
+            *Note: Data isn't 100% accurate, more of a visual
+            representation/approximation and to practice using the D3 Library.
+            Mostly is accurate though!
+          </div>
+        </div>
+        <div className={styles.skillsContainer}>
+          {skills[0].children.map((skill) => (
+            <div key={skill.name} className={styles.skillContainer}>
+              <div className={styles.skillContent}>
+                <div className={styles.skillHeader}>{skill.name}</div>
+                <div className={styles.skillsChildren}>
+                  {skill.children.map((skillMain) => (
+                    <div key={skillMain.name} className={styles.skillMain}>
+                      <div>{skillMain.name}</div>
+                      {skillMain.children &&
+                        skillMain.children.map((subSkill) => (
+                          <ul key={subSkill.name} className={styles.skillList}>
+                            <li>{subSkill.name}</li>
+                            {subSkill.children &&
+                              subSkill.children.map((subsubSkill) => (
+                                <div key={subsubSkill.name}>
+                                  - {subsubSkill.name}
+                                </div>
+                              ))}
+                          </ul>
+                        ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

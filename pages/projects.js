@@ -23,29 +23,43 @@ export default function Projects() {
             they come about. Github was the repo I utilized for my files and
             progress. You can find the link to both of these below!
           </div>
-          <div className={styles.projectLink}>
-            <a href="https://www.figma.com/file/KXnmNM29K4xWvWFT2pyBD7/Personal-Site?type=design&node-id=0%3A1&mode=design&t=BMhWVHNOkzqgoqOR-1">
-              <Image
-                priority
-                src={"/images/figma-icon.png"}
-                width={30}
-                height={30}
-                alt={"Figma Icon"}
-              />
-              <span>Figma</span>
-            </a>
-          </div>
-          <div className={styles.projectLink}>
-            <a href="https://github.com/wgabrillox/personalsite">
-              <Image
-                priority
-                src={"/images/github-logo.png"}
-                width={30}
-                height={30}
-                alt={"Github Logo"}
-              />
-              <span>Github</span>
-            </a>
+          <div className={styles.projectLinks}>
+            <div className={styles.projectLink}>
+              <a href="https://www.figma.com/file/KXnmNM29K4xWvWFT2pyBD7/Personal-Site?type=design&node-id=0%3A1&mode=design&t=BMhWVHNOkzqgoqOR-1">
+                <Image
+                  priority
+                  src={"/images/figma-icon.png"}
+                  width={30}
+                  height={30}
+                  alt={"Figma Icon"}
+                />
+                <span>Figma</span>
+              </a>
+            </div>
+            <div className={styles.projectLink}>
+              <a href="https://github.com/wgabrillox/personalsite">
+                <Image
+                  priority
+                  src={"/images/github-logo.png"}
+                  width={30}
+                  height={30}
+                  alt={"Github Logo"}
+                />
+                <span>Github</span>
+              </a>
+            </div>
+            <div className={styles.projectLink}>
+              <a href="https://trello.com/b/DLvCdqaQ/personal-site">
+                <Image
+                  priority
+                  src={"/images/trello-logo.jpeg"}
+                  width={30}
+                  height={30}
+                  alt={"Trello Logo"}
+                />
+                <span>Trello</span>
+              </a>
+            </div>
           </div>
         </div>
         <div className={styles.project}>

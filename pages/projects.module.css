@@ -37,6 +37,10 @@
   margin: 0px auto;
 }
 
+.projectLinks {
+  display: flex;
+}
+
 .projectLink {
   margin: 15px;
 }

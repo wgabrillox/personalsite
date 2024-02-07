@@ -33,27 +33,31 @@ export default function Experiences({ experiences }) {
                     alt={imageAlt}
                   />
                 </div>
-                <div className={styles.companyName}>{company}</div>
-                <div className={styles.position}>{position}</div>
-                <div className={styles.timeline}>{timeline}</div>
+                <div className={styles.companyDetails}>
+                  <div className={styles.companyName}>{company}</div>
+                  <div className={styles.position}>{position}</div>
+                  <div className={styles.timeline}>{timeline}</div>
+                </div>
               </div>
-              <div className={styles.middleColumn}>
-                <ul className={styles.description}>
-                  {description.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className={styles.rightColumn}>
-                <div className={styles.skills}>
-                  <div className={styles.skillsHeader}>Key Skills Used:</div>
-                  <ul className={styles.skillList}>
-                    {skills.map((skill, index) => (
-                      <li key={index} className={styles.skillLabel}>
-                        {skill}
-                      </li>
+              <div className={styles.detailsColumn}>
+                <div className={styles.middleColumn}>
+                  <ul className={styles.description}>
+                    {description.map((item, index) => (
+                      <li key={index}>{item}</li>
                     ))}
                   </ul>
+                </div>
+                <div className={styles.rightColumn}>
+                  <div className={styles.skills}>
+                    <div className={styles.skillsHeader}>Key Skills Used:</div>
+                    <ul className={styles.skillList}>
+                      {skills.map((skill, index) => (
+                        <li key={index} className={styles.skillLabel}>
+                          {skill}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

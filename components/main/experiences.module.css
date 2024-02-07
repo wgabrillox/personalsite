@@ -4,13 +4,17 @@
 }
 
 .container {
-  width: 1000px;
+  max-width: 1000px;
+  width: 95%;
   height: auto;
   min-height: 250px;
   background-color: #d9d9d9;
   border-radius: 5px;
   margin: 15px auto 0px;
   display: flex;
+  container-type: inline-size;
+  contain: content;
+  /* container-name: wrapper; */
 }
 
 .title {
@@ -34,6 +38,13 @@
   flex-direction: column;
   margin: 15px 0px 15px 15px;
   min-width: 200px;
+  /* container-type: inline-size; */
+}
+
+.detailsColumn {
+  display: flex;
+
+  /* flex-direction: row; */
 }
 
 .companyName,
@@ -88,4 +99,37 @@
 
 .skillLabel {
   padding: 0px;
+}
+
+@container (max-width: 900px) {
+  .experience {
+    flex-direction: column;
+  }
+
+  .leftColumn {
+    flex-direction: row;
+    margin-bottom: 0px;
+  }
+
+  .companyDetails {
+    margin-left: 15px;
+  }
+}
+
+@container (max-width: 600px) {
+  .detailsColumn {
+    flex-direction: column-reverse;
+  }
+
+  .skillList {
+    margin: 0px;
+    list-style: none;
+    padding-inline-start: 0px;
+  }
+
+  .skillList li {
+    display: inline-block;
+    border-right: 1px solid black;
+    padding: 0px 0.5rem;
+  }
 }
