@@ -129,7 +129,20 @@
 
   .skillList li {
     display: inline-block;
-    border-right: 1px solid black;
     padding: 0px 0.5rem;
+  }
+
+  .skillList li:not(:last-child) {
+    border-right: 1px solid black;
+  }
+}
+
+@container (max-width: 300px) {
+  .leftColumn {
+    flex-direction: column;
+  }
+
+  .companyDetails {
+    margin-left: 0px;
   }
 }

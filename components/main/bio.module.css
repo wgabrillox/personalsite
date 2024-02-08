@@ -82,3 +82,21 @@
     padding: 15px;
   }
 }
+
+@container main (max-width: 300px) {
+  .profilePic {
+    width: 100px;
+    height: 100px;
+    margin: 15px 0px;
+  }
+
+  .profilePicSection {
+    width: 100px;
+    height: 100px;
+    margin: 15px auto;
+  }
+
+  .bioInfo {
+    padding: 15px;
+  }
+}
