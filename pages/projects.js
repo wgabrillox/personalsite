@@ -8,7 +8,6 @@ export default function Projects() {
       <Header active={"projects"} />
       <div className={styles.container}>
         <div className={styles.title}>Projects!</div>
-        {/* <div className={styles.content}>AH HA HA</div> */}
         <div className={styles.project}>
           <div className={styles.projectTitle}>Personal Site (This one!)</div>
           <div className={styles.projectDescription}>
