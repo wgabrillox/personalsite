@@ -78,6 +78,7 @@ export default function Projects() {
             <Image
               priority
               src={"/images/guesstheEAFC-example.png"}
+              className={styles.eafcImage}
               width={400}
               height={300}
             />
