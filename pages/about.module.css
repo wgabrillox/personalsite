@@ -24,7 +24,6 @@
 .images {
   display: flex;
   width: 465px;
-  /* width: fit-content; */
   container-type: inline-size;
   container-name: images;
 }

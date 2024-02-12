@@ -14,7 +14,6 @@
   display: flex;
   container-type: inline-size;
   contain: content;
-  /* container-name: wrapper; */
 }
 
 .title {
@@ -38,13 +37,10 @@
   flex-direction: column;
   margin: 15px 0px 15px 15px;
   min-width: 200px;
-  /* container-type: inline-size; */
 }
 
 .detailsColumn {
   display: flex;
-
-  /* flex-direction: row; */
 }
 
 .companyName,
