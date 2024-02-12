@@ -1,0 +1,105 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  margin: 0px auto;
+  max-width: 840px;
+  width: 95%;
+  container-type: inline-size;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #4047f0;
+  margin: 15px auto 0px;
+  background-color: white;
+}
+
+.footnote {
+  font-weight: 400;
+  font-size: 14px;
+  color: lightgray;
+  margin: 0px auto;
+  width: 500px;
+}
+
+.d3container {
+  width: 100%;
+  display: block;
+}
+
+.skillsContainer {
+  width: 100%;
+  display: none;
+  border-radius: 5px;
+}
+
+.skillContainer {
+  background-color: #ececec;
+  flex-grow: 1;
+}
+
+.skillContainer:not(:last-child) {
+  margin-right: 15px;
+}
+
+.skillContent {
+  padding: 15px;
+  flex: 1;
+}
+
+.skillHeader {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.skillMain {
+  margin-bottom: 5px;
+}
+
+.skillList {
+  margin: 0px auto;
+  padding-left: 30px;
+}
+
+@container (max-width: 800px) {
+  .d3container {
+    display: none;
+  }
+
+  .skillsContainer {
+    display: flex;
+  }
+
+  .skillContent {
+    margin-bottom: 10px;
+  }
+
+  .skillsChildren {
+    flex-grow: 1;
+  }
+}
+
+@container (max-width: 620px) {
+  .skillsContainer {
+    display: block;
+  }
+
+  .skillContainer {
+    margin: 0px;
+  }
+
+  .skillsChildren {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skillMain {
+    flex-grow: 1;
+    padding-right: 5px;
+  }
+}

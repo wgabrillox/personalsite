@@ -1,0 +1,144 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1000px;
+  width: 95%;
+  height: auto;
+  min-height: 250px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  margin: 15px auto 0px;
+  display: flex;
+  container-type: inline-size;
+  contain: content;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #4047f0;
+  margin: 15px auto 0px;
+  background-color: white;
+}
+
+.experience {
+  display: flex;
+  margin: 15px;
+  background-color: #ececec;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0px 15px 15px;
+  min-width: 200px;
+}
+
+.detailsColumn {
+  display: flex;
+}
+
+.companyName,
+.position {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.companyName {
+  color: #4047f0;
+  margin-top: 15px;
+}
+
+.timeline {
+  color: #969696;
+  font-size: 16px;
+}
+
+.middleColumn {
+  flex-grow: 1;
+  margin: 15px 0px;
+}
+
+.description {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.rightColumn {
+  min-width: 170px;
+  background-color: #d9d9d9;
+  margin: 15px 15px;
+  height: fit-content;
+  border-radius: 5px;
+}
+
+.skills {
+  height: fit-content;
+}
+
+.skillsHeader {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 5px;
+}
+
+.skillList {
+  margin-block-start: 0px;
+  margin-block-end: 5px;
+  padding-inline-start: 30px;
+}
+
+.skillLabel {
+  padding: 0px;
+}
+
+@container (max-width: 900px) {
+  .experience {
+    flex-direction: column;
+  }
+
+  .leftColumn {
+    flex-direction: row;
+    margin-bottom: 0px;
+  }
+
+  .companyDetails {
+    margin-left: 15px;
+  }
+}
+
+@container (max-width: 600px) {
+  .detailsColumn {
+    flex-direction: column-reverse;
+  }
+
+  .skillList {
+    margin: 0px;
+    list-style: none;
+    padding-inline-start: 0px;
+  }
+
+  .skillList li {
+    display: inline-block;
+    padding: 0px 0.5rem;
+  }
+
+  .skillList li:not(:last-child) {
+    border-right: 1px solid black;
+  }
+}
+
+@container (max-width: 300px) {
+  .leftColumn {
+    flex-direction: column;
+  }
+
+  .companyDetails {
+    margin-left: 0px;
+  }
+}
