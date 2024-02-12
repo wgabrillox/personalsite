@@ -1,5 +1,3 @@
-import { useState } from "react";
-import Beta from "../components/main/beta";
 import Header from "../components/main/header";
 import Bio from "../components/main/bio";
 import Experiences from "../components/main/experiences";
@@ -8,13 +6,12 @@ import { connectToDatabase } from "../lib/mongodb";
 
 export default function Home({ experiences, skills }) {
   return (
-    <div>
-      {/* <Beta /> */}
+    <>
       <Header />
       <Bio />
       <Experiences experiences={experiences} />
       <Skills skills={skills} />
-    </div>
+    </>
   );
 }
 

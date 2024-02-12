@@ -1,8 +1,10 @@
 .container {
   display: flex;
   margin: 15px auto;
-  width: 1000px;
+  max-width: 1000px;
   flex-direction: column;
+  container-type: inline-size;
+  container-name: main;
 }
 
 .title {
@@ -10,24 +12,26 @@
   font-weight: 700;
   font-size: 34px;
   margin: 0px auto;
+  position: relative;
 }
 
 .content {
   margin-top: 30px;
   display: flex;
+  position: relative;
 }
 
 .images {
   display: flex;
   width: 465px;
+  container-type: inline-size;
+  container-name: images;
 }
 
 .leftColumn {
   width: 250px;
   height: 415px;
-  background-color: #d9d9d9;
   margin-right: 15px;
-  overflow: hidden;
   left: 0px;
   border-radius: 10px;
 }
@@ -41,14 +45,12 @@
 .rightColumnImage {
   width: 200px;
   height: 200px;
-  background-color: #d9d9d9;
   margin-bottom: 15px;
   border-radius: 10px;
-  overflow: hidden;
 }
 
 .info {
-  flex-grow: 1;
+  flex: 1;
   margin: 0px 15px;
   font-size: 18px;
 }
@@ -66,4 +68,53 @@
 #rit {
   color: #ff6900;
   font-weight: 700;
+}
+
+@container main (max-width: 999px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .images {
+    margin: 0px auto;
+  }
+}
+
+@container main (max-width: 465px) {
+  .container {
+    margin: 0px;
+  }
+
+  .content {
+    margin-top: 15px;
+  }
+
+  .images {
+    flex-direction: column;
+    width: 250px;
+  }
+
+  .leftColumn {
+    width: 100%;
+  }
+
+  .leftColumn div {
+    margin: 0px auto;
+  }
+
+  .rightColumn {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 10px;
+    display: none;
+  }
+
+  .rightColumnImage {
+    flex: 1;
+  }
+
+  .rightColumnImage div {
+    width: fit-content;
+    margin: 0px auto;
+  }
 }
