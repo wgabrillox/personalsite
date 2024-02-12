@@ -41,8 +41,11 @@
 
 .skillContainer {
   background-color: #ececec;
-  margin-right: 15px;
   flex-grow: 1;
+}
+
+.skillContainer:not(:last-child) {
+  margin-right: 15px;
 }
 
 .skillContent {
@@ -71,5 +74,33 @@
 
   .skillsContainer {
     display: flex;
+  }
+
+  .skillContent {
+    margin-bottom: 10px;
+  }
+
+  .skillsChildren {
+    flex-grow: 1;
+  }
+}
+
+@container (max-width: 620px) {
+  .skillsContainer {
+    display: block;
+  }
+
+  .skillContainer {
+    margin: 0px;
+  }
+
+  .skillsChildren {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skillMain {
+    flex-grow: 1;
+    padding-right: 5px;
   }
 }
