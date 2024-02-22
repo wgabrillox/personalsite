@@ -1,9 +1,11 @@
+"use client";
+
 import styles from "./header.module.css";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
-export default function Header({ active }) {
+export default function Header({ active = "" }) {
   const [showModal, setShowModal] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [yOffset, setYOffset] = useState(0);
