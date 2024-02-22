@@ -1,7 +1,7 @@
-import Header from "./ui/(header)/header";
-import Bio from "../components/main/bio";
-import Experiences from "../components/main/experiences";
-import Skills from "../components/main/skills";
+import Header from "./ui/header/header";
+import Bio from "./ui/home/bio";
+import Experiences from "./ui/home/experiences";
+import Skills from "./ui/home/skills";
 import { connectToDatabase } from "../lib/mongodb";
 
 export default function Page({ experiences, skills }) {

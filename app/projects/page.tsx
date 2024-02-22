@@ -1,11 +1,9 @@
-import Header from "../components/main/header";
 import styles from "./projects.module.css";
 import Image from "next/image";
 
 export default function Projects() {
   return (
     <div>
-      <Header active={"projects"} />
       <div className={styles.container}>
         <div className={styles.title}>Projects!</div>
         <div className={styles.project}>
@@ -81,6 +79,7 @@ export default function Projects() {
               className={styles.eafcImage}
               width={400}
               height={300}
+              alt="Guess the EAFC screenshot"
             />
           </div>
           <div className={styles.projectLink}>

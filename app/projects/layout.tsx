@@ -2,13 +2,13 @@ import { Metadata } from "next";
 import Header from "../ui/header/header";
 
 export const metadata: Metadata = {
-  title: "About Me",
+  title: "Projects",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <Header active={"about"} />
+      <Header active={"projects"} />
       <div>{children}</div>
     </div>
   );
