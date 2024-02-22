@@ -1,4 +1,4 @@
-import Header from "../components/main/header";
+import Header from "./ui/(header)/header";
 import Bio from "../components/main/bio";
 import Experiences from "../components/main/experiences";
 import Skills from "../components/main/skills";
