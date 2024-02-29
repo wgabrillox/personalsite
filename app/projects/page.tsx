@@ -1,11 +1,9 @@
-import Header from "../components/main/header";
 import styles from "./projects.module.css";
 import Image from "next/image";
 
 export default function Projects() {
   return (
     <div>
-      <Header active={"projects"} />
       <div className={styles.container}>
         <div className={styles.title}>Projects!</div>
         <div className={styles.project}>
@@ -27,7 +25,7 @@ export default function Projects() {
               <a href="https://www.figma.com/file/KXnmNM29K4xWvWFT2pyBD7/Personal-Site?type=design&node-id=0%3A1&mode=design&t=BMhWVHNOkzqgoqOR-1">
                 <Image
                   priority
-                  src={"/images/figma-icon.png"}
+                  src={"/images/projects/figma-icon.png"}
                   width={30}
                   height={30}
                   alt={"Figma Icon"}
@@ -39,7 +37,7 @@ export default function Projects() {
               <a href="https://github.com/wgabrillox/personalsite">
                 <Image
                   priority
-                  src={"/images/github-logo.png"}
+                  src={"/images/projects/github-logo.png"}
                   width={30}
                   height={30}
                   alt={"Github Logo"}
@@ -51,7 +49,7 @@ export default function Projects() {
               <a href="https://trello.com/b/DLvCdqaQ/personal-site">
                 <Image
                   priority
-                  src={"/images/trello-logo.jpeg"}
+                  src={"/images/projects/trello-logo.jpeg"}
                   width={30}
                   height={30}
                   alt={"Trello Logo"}
@@ -77,17 +75,18 @@ export default function Projects() {
             Javascript/React.
             <Image
               priority
-              src={"/images/guesstheEAFC-example.png"}
+              src={"/images/projects/guesstheEAFC-example.png"}
               className={styles.eafcImage}
               width={400}
               height={300}
+              alt="Guess the EAFC screenshot"
             />
           </div>
           <div className={styles.projectLink}>
             <a href="https://github.com/wgabrillox/guesstheeafc">
               <Image
                 priority
-                src={"/images/github-logo.png"}
+                src={"/images/projects/github-logo.png"}
                 width={30}
                 height={30}
                 alt="Github Logo"
