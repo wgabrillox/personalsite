@@ -4,7 +4,20 @@ import Experiences from "./ui/home/experiences";
 import Skills from "./ui/home/skills";
 import { connectToDatabase } from "../lib/mongodb";
 
-export default function Page({ experiences, skills }) {
+export default async function Page({}) {
+  const { db } = await connectToDatabase();
+
+  const experiences = await db.collection("Experiences").find().toArray();
+  const skillsRaw = await db.collection("Skills").find().toArray();
+  const baseData = skillsRaw[0];
+  const skills = [
+    {
+      id: baseData._id.toString(),
+      name: baseData.name,
+      children: baseData.children,
+    },
+  ];
+
   return (
     <>
       <Header />
@@ -14,17 +27,3 @@ export default function Page({ experiences, skills }) {
     </>
   );
 }
-
-// export async function getServerSideProps() {
-//   let { db } = await connectToDatabase();
-
-//   const experiences = await db.collection("Experiences").find().toArray();
-//   const skills = await db.collection("Skills").find().toArray();
-
-//   return {
-//     props: {
-//       experiences: JSON.parse(JSON.stringify(experiences)),
-//       skills: JSON.parse(JSON.stringify(skills)),
-//     },
-//   };
-// }
