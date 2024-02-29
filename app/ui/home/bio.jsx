@@ -11,7 +11,8 @@ export default function Bio() {
               priority
               src="/images/profile.jpg"
               className={styles.borderCircle}
-              fill={true}
+              fill
+              sizes="(max-width: 200px), (max-height: 200px)"
               alt="Picture of Warren R. Gabrillo"
             />
           </div>

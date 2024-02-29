@@ -1,11 +1,9 @@
-import Header from "../components/main/header";
 import styles from "./about.module.css";
 import Image from "next/image";
 
 export default function About() {
   return (
     <>
-      <Header active={"about"} />
       <div className={styles.container}>
         <div className={styles.title}>ABOUT ME!</div>
         <div className={styles.content}>
