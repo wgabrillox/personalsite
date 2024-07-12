@@ -26,6 +26,7 @@
   padding: 15px;
   border-radius: 5px;
   display: flex;
+  align-items: center;
 }
 
 .title {
@@ -57,8 +58,9 @@
 }
 
 .lorcanaImg {
-  max-width: 400px;
-  max-height: 300px;
+  position: relative;
+  width: 400px;
+  height: 300px;
 }
 
 @container (max-width: 1000px) {
@@ -66,16 +68,17 @@
     display: flex;
     flex-direction: column-reverse;
   }
-
-  .lorcanaImg {
-    margin: 0px auto;
-    width: 95%;
-    height: 95%;
-  }
 }
 
 @container (max-width: 375px) {
   .projectLinks {
     display: inline-block;
+  }
+
+  .lorcanaImg {
+    margin: 0px auto;
+    border: 1px solid black;
+    width: 95%;
+    height: 95%;
   }
 }
