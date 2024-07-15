@@ -11,6 +11,7 @@
   background-color: #d9d9d9;
   border-radius: 5px;
   flex-grow: 1;
+  position: relative;
 }
 
 .projectTitle {
@@ -61,6 +62,7 @@
   position: relative;
   width: 400px;
   height: 300px;
+  max-height: 300px;
 }
 
 @container (max-width: 1000px) {
@@ -70,15 +72,16 @@
   }
 }
 
+@container (max-width: 500px) {
+  .lorcanaImg {
+    margin: 0px auto;
+    width: 95%;
+    height: 200px;
+  }
+}
+
 @container (max-width: 375px) {
   .projectLinks {
     display: inline-block;
-  }
-
-  .lorcanaImg {
-    margin: 0px auto;
-    border: 1px solid black;
-    width: 95%;
-    height: 95%;
   }
 }

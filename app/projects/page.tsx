@@ -83,18 +83,12 @@ export default function Projects() {
             sets, and uses that data accordingly. Otherwise it is created purely
             using React, and hosted on Vercel. I will be constantly adding
             updates throughout.
-            <div
-              // style={{
-              //   width: 400,
-              //   height: 300,
-              //   position: "relative",
-              // }}
-              className={styles.lorcanaImg}
-            >
+            <div className={styles.lorcanaImg}>
               <Image
                 priority
                 src={IMAGES.lorcanaGuess}
                 fill
+                sizes="(max-width: 500px) 95vw, (max-width: 1000px) 100vw"
                 alt="Lorcana:Guess the Card screenshot"
               />
             </div>
