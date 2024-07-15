@@ -1,5 +1,37 @@
 import styles from "./projects.module.css";
 import Image from "next/image";
+import { IMAGES } from "../../constants";
+
+const ProjectLink = ({ type, link }) => {
+  const projectLinks = {
+    figma: {
+      imageLink: IMAGES.figma,
+      imageAlt: "Figma Icon",
+      imageLabel: "Figma",
+    },
+    github: {
+      imageLink: IMAGES.github,
+      imageAlt: "Github Icon",
+      imageLabel: "Github",
+    },
+    trello: {
+      imageLink: IMAGES.trello,
+      imageAlt: "Trello Icon",
+      imageLabel: "Trello",
+    },
+  };
+
+  const { imageLink, imageAlt, imageLabel } = projectLinks[type];
+
+  return (
+    <div className={styles.projectLink}>
+      <a href={link}>
+        <Image priority src={imageLink} width={30} height={30} alt={imageAlt} />
+        <span>{imageLabel}</span>
+      </a>
+    </div>
+  );
+};
 
 export default function Projects() {
   return (
@@ -21,42 +53,18 @@ export default function Projects() {
             progress. You can find the link to both of these below!
           </div>
           <div className={styles.projectLinks}>
-            <div className={styles.projectLink}>
-              <a href="https://www.figma.com/file/KXnmNM29K4xWvWFT2pyBD7/Personal-Site?type=design&node-id=0%3A1&mode=design&t=BMhWVHNOkzqgoqOR-1">
-                <Image
-                  priority
-                  src={"/images/projects/figma-icon.png"}
-                  width={30}
-                  height={30}
-                  alt={"Figma Icon"}
-                />
-                <span>Figma</span>
-              </a>
-            </div>
-            <div className={styles.projectLink}>
-              <a href="https://github.com/wgabrillox/personalsite">
-                <Image
-                  priority
-                  src={"/images/projects/github-logo.png"}
-                  width={30}
-                  height={30}
-                  alt={"Github Logo"}
-                />
-                <span>Github</span>
-              </a>
-            </div>
-            <div className={styles.projectLink}>
-              <a href="https://trello.com/b/DLvCdqaQ/personal-site">
-                <Image
-                  priority
-                  src={"/images/projects/trello-logo.jpeg"}
-                  width={30}
-                  height={30}
-                  alt={"Trello Logo"}
-                />
-                <span>Trello</span>
-              </a>
-            </div>
+            <ProjectLink
+              type="figma"
+              link="https://www.figma.com/file/KXnmNM29K4xWvWFT2pyBD7/Personal-Site?type=design&node-id=0%3A1&mode=design&t=BMhWVHNOkzqgoqOR-1"
+            />
+            <ProjectLink
+              type="github"
+              link="https://github.com/wgabrillox/personalsite"
+            />
+            <ProjectLink
+              type="trello"
+              link="https://trello.com/b/DLvCdqaQ/personal-site"
+            />
           </div>
         </div>
         <div className={styles.project}>
@@ -75,40 +83,29 @@ export default function Projects() {
             sets, and uses that data accordingly. Otherwise it is created purely
             using React, and hosted on Vercel. I will be constantly adding
             updates throughout.
-            <Image
-              priority
-              src={"/images/projects/lorcana-guess.png"}
-              className={styles.lorcanaImg}
-              width={400}
-              height={300}
-              alt="Lorcana:Guess the Card screenshot"
-            />
+            <div className={styles.lorcanaImg}>
+              <Image
+                priority
+                src={IMAGES.lorcanaGuess}
+                fill
+                sizes="(max-width: 500px) 95vw, (max-width: 1000px) 100vw"
+                alt="Lorcana:Guess the Card screenshot"
+              />
+            </div>
           </div>
           <div className={styles.projectLinks}>
-            <div className={styles.projectLink}>
-              <a href="https://www.figma.com/design/AADqIL2Rnf4lB57jjB5P41/Lorcana-Guess-The-Card?node-id=0-1&t=WUpZyb6U6bwXvztM-1">
-                <Image
-                  priority
-                  src={"/images/projects/figma-icon.png"}
-                  width={30}
-                  height={30}
-                  alt={"Figma Icon"}
-                />
-                <span>Figma</span>
-              </a>
-            </div>
-            <div className={styles.projectLink}>
-              <a href="https://github.com/wgabrillox/lorcana-guess">
-                <Image
-                  priority
-                  src={"/images/projects/github-logo.png"}
-                  width={30}
-                  height={30}
-                  alt="Github Logo"
-                />
-                <span>Github</span>
-              </a>
-            </div>
+            <ProjectLink
+              type="figma"
+              link="https://www.figma.com/design/AADqIL2Rnf4lB57jjB5P41/Lorcana-Guess-The-Card?node-id=0-1&t=WUpZyb6U6bwXvztM-1"
+            />
+            <ProjectLink
+              type="github"
+              link="https://github.com/wgabrillox/lorcana-guess"
+            />
+            <ProjectLink
+              type="trello"
+              link="https://trello.com/b/x8hrbmOT/lorcana-guess"
+            />
           </div>
         </div>
       </div>

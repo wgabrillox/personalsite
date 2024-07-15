@@ -1,5 +1,6 @@
 import styles from "./about.module.css";
 import Image from "next/image";
+import { IMAGES } from "../../constants";
 
 export default function About() {
   return (
@@ -12,7 +13,7 @@ export default function About() {
               <div>
                 <Image
                   priority
-                  src="/images/about-me/wedding.JPG"
+                  src={IMAGES.weddingPic}
                   height={415}
                   width={250}
                   alt="Picture of Warren R. Gabrillo"
@@ -24,7 +25,7 @@ export default function About() {
                 <div>
                   <Image
                     priority
-                    src="/images/about-me/mantou.JPG"
+                    src={IMAGES.mantou}
                     height={200}
                     width={200}
                     alt="Picture of Warren R. Gabrillo"
@@ -35,7 +36,7 @@ export default function About() {
                 <div>
                   <Image
                     priority
-                    src="/images/about-me/alien.jpeg"
+                    src={IMAGES.alien}
                     height={200}
                     width={200}
                     alt="Picture of Warren R. Gabrillo"
