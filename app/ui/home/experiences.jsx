@@ -1,5 +1,6 @@
 import styles from "./experiences.module.css";
 import Image from "next/image";
+import { IMAGES } from "../../../constants";
 
 export default function Experiences({ experiences }) {
   return (
@@ -11,6 +12,7 @@ export default function Experiences({ experiences }) {
           (
             {
               image,
+              imageTest,
               imageWidth,
               imageHeight,
               imageAlt,
@@ -28,7 +30,7 @@ export default function Experiences({ experiences }) {
                   <div>
                     <Image
                       priority
-                      src={image}
+                      src={IMAGES[image]}
                       width={imageWidth}
                       height={imageHeight}
                       alt={imageAlt}

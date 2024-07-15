@@ -1,5 +1,6 @@
 import styles from "./bio.module.css";
 import Image from "next/image";
+import { IMAGES } from "../../../constants";
 
 export default function Bio() {
   return (
@@ -9,7 +10,7 @@ export default function Bio() {
           <div className={styles.profilePic}>
             <Image
               priority
-              src="/images/profile.jpg"
+              src={IMAGES.profilePic}
               className={styles.borderCircle}
               fill
               sizes="(max-width: 200px), (max-height: 200px)"
