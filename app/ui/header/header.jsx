@@ -4,7 +4,7 @@ import styles from "./header.module.css";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-
+import { IMAGES } from "../../../constants";
 export default function Header({ active = "" }) {
   const [showModal, setShowModal] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -117,7 +117,7 @@ export default function Header({ active = "" }) {
         <div className={styles.hamburgerMenu}>
           <Image
             priority
-            src="/images/hamburger-menu.png"
+            src={IMAGES.hamburgerIcon}
             className={styles.hamburgerMenuIcon}
             height={35}
             width={35}
