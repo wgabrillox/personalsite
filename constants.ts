@@ -29,4 +29,8 @@ export const IMAGES: ImagesList = {
     "https://res.cloudinary.com/dhtbrbpni/image/upload/v1720804553/Personal%20Site/profile_bgf7bh.jpg",
   hamburgerIcon:
     "https://res.cloudinary.com/dhtbrbpni/image/upload/v1720804553/Personal%20Site/hamburger-menu_qliwbp.png",
+  linkedIn:
+    "https://res.cloudinary.com/dhtbrbpni/image/upload/v1720804504/Personal%20Site/linkedin-logo_yiyakx.png",
+  gmail:
+    "https://res.cloudinary.com/dhtbrbpni/image/upload/v1720804503/Personal%20Site/gmail-icon_fvj4yt.png",
 };

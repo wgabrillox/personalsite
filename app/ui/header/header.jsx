@@ -66,7 +66,7 @@ export default function Header({ active = "" }) {
               <div className={styles.modalItem}>
                 <Image
                   priority
-                  src="/images/gmail-icon.png"
+                  src={IMAGES.gmail}
                   className={styles.contactIcon}
                   height={35}
                   width={35}
@@ -77,7 +77,7 @@ export default function Header({ active = "" }) {
               <div className={styles.modalItem}>
                 <Image
                   priority
-                  src="/images/linkedin-logo.png"
+                  src={IMAGES.linkedIn}
                   className={styles.contactIcon}
                   height={35}
                   width={35}
