@@ -16,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link href="./output.css" rel="stylesheet" />
+      </head>
       <body className={`${roboto.className} antialiased`}>{children}</body>
     </html>
   );

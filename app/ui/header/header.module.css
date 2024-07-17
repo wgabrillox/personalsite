@@ -103,18 +103,6 @@
   margin-bottom: 5px;
 }
 
-.contactIcon {
-  margin-right: 10px;
-  border-radius: 5px;
-}
-
-.modalItem {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
 .hamburgerMenuContent {
   position: absolute;
   box-shadow: 5px 5px 5px gray;
